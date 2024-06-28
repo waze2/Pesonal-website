@@ -1,0 +1,12 @@
+body{
+    overflow: hidden;
+    background: url('../images/ice_mountain_bg.jpg') rgba(0,0,0,0.3);
+    background-blend-mode: multiply;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* background for index page */
+
+

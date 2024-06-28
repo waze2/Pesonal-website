@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <link href="../CSS/style.css" rel="stylesheet"/>
+    <script src="../javascript/scrolltotop.js"></script>
+    <script src="../javascript/scrollToSection.js"></script>
+    <title>Feedback form</title>
+</head>
+<body class="overflow-auto vh-100">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand fs-3 tex" href="https://savetheearth.org/" target="blank">Save The Earth!</a>
+      <!-- toggle btn -->
+      <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- sidebar -->
+      <div class="sidebar offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <!-- sidebar header -->
+        <div class="offcanvas-header text-white border-bottom">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+          <button type="button" 
+            class="btn-close btn-close-black shadow-none" 
+            data-bs-dismiss="offcanvas" 
+            aria-label="Close"></button>
+        </div>
+        <!-- sidebar body -->
+        <div class="offcanvas-body d-flex flex-column p-4 bg-dark">
+          <ul class="navbar-nav justify-content-center align-items-center 
+          fs-6 flex-grow-1 pe-3">
+          <!-- ADD HOVER STYLES -->
+            <li class="nav-item mx-3">
+              <a class="btn btn-outline-light" href="../HTML/index.html" role="button">Home</a>
+            </li>
+            <li class="nav-item mx-3">
+              <a class="btn btn-outline-light" href="../HTML/aboutMe.html" role="button">About</a>
+            </li>
+
+            <li class="nav-item mx-3">
+              <a class="btn btn-outline-light" href="../HTML/initiative.htm" role="button">Initiative</a>
+            </li>
+
+            <li class="nav-item mx-3">
+              <a class="btn btn-outline-light" href="../HTML/opinion.html" role="button">Opinion</a>
+            </li>
+
+            <li class="nav-item mx-3">
+              <a class="btn btn-outline-light" href="../HTML/feedback.html" role="button">Feedback</a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+      
+      <main class="bg-white">
+        <!--main content-->
+        <section class="w-100 vh-100 d-flex flex-column justify-content-center 
+        align-items-center fs-1">
+          <p class="display-6">Feedback Form</p>
+          <button class="btn btn-outline-dark" onclick="scrollToSection()">Let's Go!</button> <!--scroll to button-->
+        </section>
+
+          <div class="container px-5 my-5 rounded fs-5 py-5" id="main-section">
+            <div class="alert alert-danger alert-dismissible fade show" role="alert"> <!--alert widget-->
+              <strong>Please do not leave any blanks empty!</strong>
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            <form id="contactForm"> <!--form content-->
+                  <div class="mb-3">
+                      <label class="form-label" for="whatsYourName">What&#x27;s your name?</label>
+                      <input class="form-control" id="whatsYourName" type="text" placeholder="What&#x27;s your name?" />
+                      <div class="invalid-feedback">What&#x27;s your name? is required.</div>
+                  </div>
+                  <div class="mb-3">
+                      <label class="form-label" for="whatsYourGender">What&#x27;s your gender?</label>
+                      <select class="form-select" id="whatsYourGender" aria-label="What&#x27;s your gender?"> <!--drop down menu-->
+                          <option value="Male">Male</option>
+                          <option value="Female">Female</option>
+                          <option value="Others">Others</option>
+                          <option value="Prefer not to say">Prefer not to say</option>
+                      </select>
+                  </div>
+                <div class="mb-3">
+                    <label class="form-label" for="emailAddress">Email Address</label>
+                    <input class="form-control" id="emailAddress" type="email" placeholder="Email Address" /> <!--validation-->
+                    <div class="invalid-feedback">Email Address is required.</div>
+                    <div class="invalid-feedback">Email Address Email is not valid.</div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label d-block">Would You Recommend My Website To Your Peers?</label> <!--radio widget-->
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" id="yes" type="radio" name="wouldYouRecommendMyWebsiteToYourPeers"/>
+                        <label class="form-check-label" for="yes">Yes</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" id="no" type="radio" name="wouldYouRecommendMyWebsiteToYourPeers"/>
+                        <label class="form-check-label" for="no">No</label>
+                    </div>
+                    <div class="invalid-feedback">One option is required.</div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label d-block">Which modes of transport do you use for travel to and from work?</label> <!--checkbox widget-->
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" id="onFoot" type="checkbox" name="whichModesOfTransportDoYouUseForTravelToAndFromWork" />
+                        <label class="form-check-label" for="onFoot">On foot</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" id="bicycle" type="checkbox" name="whichModesOfTransportDoYouUseForTravelToAndFromWork"/>
+                        <label class="form-check-label" for="bicycle">Bicycle</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" id="motorcycleScooter" type="checkbox" name="whichModesOfTransportDoYouUseForTravelToAndFromWork" />
+                        <label class="form-check-label" for="motorcycleScooter">Motorcycle/Scooter</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" id="car" type="checkbox" name="whichModesOfTransportDoYouUseForTravelToAndFromWork" />
+                        <label class="form-check-label" for="car">Car</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" id="bus" type="checkbox" name="whichModesOfTransportDoYouUseForTravelToAndFromWork"/>
+                        <label class="form-check-label" for="bus">Bus</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" id="trainSubway" type="checkbox" name="whichModesOfTransportDoYouUseForTravelToAndFromWork"/>
+                        <label class="form-check-label" for="trainSubway">Train/Subway</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" id="others" type="checkbox" name="whichModesOfTransportDoYouUseForTravelToAndFromWork"/>
+                        <label class="form-check-label" for="others">Others</label>
+                    </div>
+                    <div class="invalid-feedback">One option is required.</div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="customRange2" class="form-label">How Satisfied Are You With My Website?</label> <!--range widget-->
+                  <input type="range" class="form-range" min="0" max="4" id="customRange2">
+                  <div class="row">
+                    <div class="col-md">
+                      <p class="text-start">Very Unsatisfied</p>
+                    </div>
+                    <div class="col-md">
+                      <p class="text-start">Unsatisfied</p>
+                    </div>
+                    <div class="col-md">
+                      <p class="text-center">Mehh</p>
+                    </div>
+                    <div class="col-md">
+                      <p class="text-end">Satisfied</p>
+                    </div>
+                    <div class="col-md">
+                      <p class="text-end">Very Satisfied</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="anySuggestionsToImproveMyWebsite">Any Suggestions To Improve My Website? </label>
+                    <textarea class="form-control" id="anySuggestionsToImproveMyWebsite" placeholder="Any Suggestions To Improve My Website? "></textarea>
+                </div>
+                <div class="d-none" id="submitSuccessMessage">
+                    <div class="text-center mb-3">
+                        <div class="fw-bolder">Form submission successful!</div>
+                    </div>
+                </div>
+                <div class="d-none" id="submitErrorMessage">
+                    <div class="text-center text-danger mb-3">Error sending message!</div>
+                </div>
+                <div class="d-grid">
+                    <button class="btn btn-success btn-lg" id="submitButton" type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="container px-5 my-5 rounded fs-5 py-5">
+          <h2>SP Opening Hours</h2>
+          <table class="table" style="color: #2a52be; border-color: #666;"> <!--table content-->
+            <tbody>
+              <tr>
+                <td>Mon - Sun:</td>
+                <td>6am - 11pm</td>
+              </tr>
+              <tr>
+                <td>Public Holidays:</td>
+                <td>closed</td>
+              </tr>
+              <tr>
+                <td>Vacation:</td>
+                <td>7am-6pm</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="d-flex align-items-center justify-content-center mx-auto pb-5"> <!--back to top button-->
+          <button onclick="toTop()" class="btn btn-dark">Back to top</button>
+        </div>
+      </main>
+
+      <!-- Footer -->
+      <footer class="bg-dark text-center text-white">
+        <!-- Grid container -->
+        <div class="container p-4">
+          <!-- Section: Social media -->
+          <section class="mb-4">
+            <!-- Facebook -->
+            <a class="btn btn-outline-light btn-floating m-1" href="twitter.com" role="button"><img src="../images/twitter-icon.png" alt="twitter"></a><!--image taken from https://www.flaticon.com/free-icons/twitter" Twitter icons created by Pixel perfect - Flaticon-->
+
+            <!-- Twitter -->
+            <a class="btn btn-outline-light btn-floating m-1" href="facebook.com" role="button"><img src="../images/facebook-icon.png" alt="facebook"></a><!--https://www.flaticon.com/free-icons/facebook" Facebook icons created by Pixel perfect - Flaticon-->
+            <!-- Google -->
+            <a class="btn btn-outline-light btn-floating m-1" href="reddit.com" role="button"><img src="../images/reddit-icon.png" alt="reddit"></a><!--https://www.flaticon.com/free-icons/reddit Reddit icons created by Md Tanvirul Haque - Flaticon-->
+
+            <!-- Instagram -->
+            <a class="btn btn-outline-light btn-floating m-1" href="instagram.com" role="button"><img src="../images/instagram-icon.png" alt="instagram"></a><!--<a href="https://www.flaticon.com/free-icons/instagram-logo" title="instagram logo icons">Instagram logo icons created by Pixel perfect - Flaticon</a>-->
+
+            <!-- Linkedin -->
+            <a class="btn btn-outline-light btn-floating m-1" href="youtube.com" role="button"><img src="../images/youtube-icon.png" alt="youtube"></a><!--<a href="https://www.flaticon.com/free-icons/youtube" title="youtube icons">Youtube icons created by Freepik - Flaticon</a>-->
+
+            <!-- Github -->
+            <a class="btn btn-outline-light btn-floating m-1" href="vk.com" role="button"><img src="../images/vk-icon.png" alt="vk"></a><!--<a href="https://www.flaticon.com/free-icons/vk" title="VK icons">VK icons created by Freepik - Flaticon</a>-->
+          </section>
+          <!-- Section: Social media -->
+
+
+          <!-- Section: Text -->
+          <section class="mb-4">
+            <h4 class="mb-3">Why Save The Earth?</h4>
+            <p>
+              We should save the mother earth so that our future generations can live in a safe environment. We can save the earth by saving trees, 
+              natural vegetation, water, natural resources, electricity, etc. We should strictly follow all the possible 
+              measures to control the environmental pollution and global warming.
+            </p>
+          </section>
+          <!-- Section: Text -->
+
+          <!-- Section: Links -->
+          <section class="">
+            <!--Grid row-->
+            <div class="row">
+              <!--Grid column-->
+              <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase">Navigation</h5>
+
+                <ul class="list-unstyled mb-0">
+                  <li>
+                    <a href="../HTML/index.html" class="text-white">Home</a>
+                  </li>
+                  <li>
+                    <a href="../HTML/initiative.htm" class="text-white">Initiative</a>
+                  </li>
+                  <li>
+                    <a href="../HTML/opinion.html" class="text-white">Opinion</a>
+                  </li>
+                  <li>
+                    <a href="../HTML/feedback.html" class="text-white">Feedback</a>
+                  </li>
+                  <li>
+                    <a href="../HTML/aboutMe.html" class="text-white">About Me</a>
+                  </li>
+                </ul>
+              </div>
+              <!--Grid column-->
+
+              <!--Grid column-->
+              <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase">Environmental Organisations</h5>
+
+                <ul class="list-unstyled mb-0">
+                  <li>
+                    <a href="https://wild.org/" class="text-white">WILD</a>
+                  </li>
+                  <li>
+                    <a href="https://www.wwf.sg/" class="text-white">WWF</a>
+                  </li>
+                  <li>
+                    <a href="https://www.fern.org/" class="text-white">FERN</a>
+                  </li>
+                  <li>
+                    <a href="350.org" class="text-white">350.org</a>
+                  </li>
+                </ul>
+              </div>
+              <!--Grid column-->
+
+              <!--Grid column-->
+              <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase">Useful Links</h5>
+
+                <ul class="list-unstyled mb-0">
+                  <li>
+                    <a href="fast.com" class="text-white">fast.com</a>
+                  </li>
+                  <li>
+                    <a href="draw.io" class="text-white">draw.io</a>
+                  </li>
+                  <li>
+                    <a href="slides.com" class="text-white">slides.com</a>
+                  </li>
+                  <li>
+                    <a href="codeacademy.com" class="text-white">codeacademy.com</a>
+                  </li>
+                </ul>
+              </div>
+              <!--Grid column-->
+
+
+            </div>
+            <!--Grid row-->
+          </section>
+          <!-- Section: Links -->
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+          © 2023 Copyright: How Wei Zhe
+        </div>
+        <!-- Copyright -->
+      </footer>
+      <!-- Footer -->
+    
+</body>
+</html>

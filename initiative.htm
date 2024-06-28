@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Initiative</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="../javascript/scrolltotop.js"></script>
+    <script src="../javascript/scrollToSection.js"></script>
+</head>
+<body class = "vh-100 overflow-auto">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand fs-3 tex" href="https://savetheearth.org/" target="blank">Save The Earth!</a>
+        <!-- toggle btn -->
+        <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- sidebar -->
+        <div class="sidebar offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <!-- sidebar header -->
+          <div class="offcanvas-header text-white border-bottom">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+            <button type="button" 
+              class="btn-close btn-close-black shadow-none" 
+              data-bs-dismiss="offcanvas" 
+              aria-label="Close"></button>
+          </div>
+          <!-- sidebar body -->
+          <div class="offcanvas-body d-flex flex-column p-4 bg-dark">
+            <ul class="navbar-nav justify-content-center align-items-center 
+            fs-6 flex-grow-1 pe-3">
+            <!-- NAV items -->
+              <li class="nav-item mx-3">
+                <a class="btn btn-outline-light" href="../HTML/index.html" role="button">Home</a>
+              </li>
+              <li class="nav-item mx-3">
+                <a class="btn btn-outline-light" href="../HTML/aboutMe.html" role="button">About</a>
+              </li>
+
+              <li class="nav-item mx-3">
+                <a class="btn btn-outline-light" href="../HTML/initiative.htm" role="button">Initiative</a>
+              </li>
+
+              <li class="nav-item mx-3">
+                <a class="btn btn-outline-light" href="../HTML/opinion.html" role="button">Opinion</a>
+              </li>
+
+              <li class="nav-item mx-3">
+                <a class="btn btn-outline-light" href="../HTML/feedback.html" role="button">Feedback</a>
+              </li>
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+        <main class="bg-white">
+          <!--main content-->
+          <section class="w-100 vh-100 d-flex flex-column justify-content-center 
+            align-items-center fs-1">
+            <p class="display-6">What SP Has Done For The Community</p>
+            <img id="sp-logo" src="../images/sp-logo.png" class="rounded mx-auto d-block" alt="..."> <!--image taken from SP website-->
+            <button class="btn btn-outline-dark my-3" onclick="scrollToSection()">Click Me!</button> <!--scroll to button-->
+        </section>
+          <div class="row g-6 mx-2"> <!--Card widgets-->
+            <div class="col col-12 col-md-6 col-xl-4">
+              <div class="card my-4 text-bg-dark" id="main-section">
+                <img src="../images/sp-via-1.jpg" class="card-img-top" alt="sp-community-1">
+                <div class="card-body">
+                  <h5 class="card-title">Community Action 1</h5>
+                  <p class="card-text">From the image above, it is Government Chief Sustainability Officer Lim Tuang Liang: Making good use of sustainable energy engineering</p>
+                  <a href="https://www.sp.edu.sg/sp/news/sp/government-chief-sustainability-officer-lim-tuang-liang-making-good-use-of-sustainable-energy-engineering-can-lead-to-more-breakthroughs" class="btn btn-info" target="blank">Visit Page</a>
+                </div>
+              </div>
+            </div>
+            <div class="col col-12 col-md-6 col-xl-4">
+              <div class="card my-4 text-bg-dark">
+                <img src="../images/sp-via-2.jpg" class="card-img-top" alt="sp-community-2">
+                <div class="card-body">
+                  <h5 class="card-title">Community Action 2</h5>
+                  <p class="card-text">From the image above we can SP's collaboration with Sembcorp and CHINT to fast-track sustainable energy development in Asia</p>
+                  <a href="https://www.sp.edu.sg/sp/news/sp/singapore-polytechnic-collaborates-with-sembcorp-and-chint-to-fast-track-sustainable-energy-development-in-asia" class="btn btn-info" target="blank">Visit Page</a>
+                </div>
+              </div>
+            </div>
+            <div class="col col-12 col-md-6 col-xl-4">
+              <div class="card my-4 text-bg-dark">
+                <img src="../images/sp-via-3.jpg" class="card-img-top" alt="sp-community-3">
+                <div class="card-body">
+                  <h5 class="card-title">Community Action 3</h5>
+                  <p class="card-text">From the image above we see a group of students who were part of the 190 ASEAN students discuss environmental sustainability</p>
+                  <a href="https://www.instagram.com/reel/CeUysi_pdlq/" class="btn btn-info" target="blank">Visit Page</a>
+                </div>
+              </div>
+            </div>
+            <div class="col col-12 col-md-6 col-xl-4">
+              <div class="card my-4 text-bg-dark">
+                <img src="../images/sp-via-4.jpg" class="card-img-top" alt="sp-community-4">
+                <div class="card-body">
+                  <h5 class="card-title">Community Action 4</h5>
+                  <p class="card-text">From the image above, we can see SP and partners leading industry 4.0 solutions for SMEs to develop smart and sustainable businesses</p>
+                  <a href="https://www.sp.edu.sg/sp/news/sp/singapore-polytechnic-and-partners-to-lead-industry-4.0-solutions-for-smes-to-develop-smart-and-sustainable-businesses" class="btn btn-info" target="blank">Visit Page</a>
+                </div>
+              </div>
+            </div>
+            <div class="col col-12 col-md-6 col-xl-4">
+              <div class="card my-4 text-bg-dark">
+                <img src="../images/sp-via-5.jpg" class="card-img-top" alt="sp-community-5">
+                <div class="card-body">
+                  <h5 class="card-title">Community Action 5</h5>
+                  <p class="card-text">From the image above, we can see SP launching Singapore's first-ever solar photovoltaics recycling line</p>
+                  <a href="https://www.sp.edu.sg/sp/news/sp/singapore-poly-launches-country%27s-first-ever-solar-photovoltaics-recycling-line" class="btn btn-info" target="blank">Visit Page</a>
+                </div>
+              </div>
+            </div>
+            <div class="col col-12 col-md-6 col-xl-4">
+              <div class="card my-4 text-bg-dark">
+                <img src="../images/sp-via-6.jpg" class="card-img-top" alt="sp-community-6">
+                <div class="card-body">
+                  <h5 class="card-title">Community Action 6</h5>
+                  <p class="card-text">From the image above, we can see NCSS spearheads 3P partnership efforts to drive sustainable transformation in non-profit sector</p>
+                  <a href="https://www.sp.edu.sg/sp/news/sp/ncss-spearheads-3p-partnership-efforts-to-drive-sustainable-transformation-in-non-profit-sector" class="btn btn-info" target="blank">Visit Page</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <section class="w-100 vh-100 d-flex flex-column justify-content-center 
+            align-items-center fs-1">
+            <p class="display-6">What SP Has Done In Campus</p>
+            <button class="btn btn-outline-dark my-3" onclick="scrollToSecondary()">Click Me!</button><!--scroll to button-->
+          </section>
+          <div class="container my-5" id="secondary-section">
+            <!-- Pic right content left -->
+            <div class="row">
+              <div class="col-md-5 my-5">
+                <h3>The First Initiative</h3>
+                <p class="lead fs-4">SP has installed more than a hundred water dispensers around the campus. This initiative started by SP is very effective as students are able to bring their own bottles to school instead of buying plastic bottles. It also further benefits students by helping to reduce the cost of having to purchase their own water.</p>
+              </div>
+              <div class="col-md-5 offset-md-2 my-5">
+                <figure class="figure">
+                  <img src="../images/sp-initiative-1.PNG" class="figure-img img-fluid rounded" alt="initiative-1">
+                  <figcaption class="figure-caption">100+ water dispensers</figcaption>
+                </figure>
+              </div>
+            </div>
+            <!-- Pic left content right -->
+            <div class="row">
+              <div class="col-md-5 my-5">
+                <figure class="figure">
+                  <img src="../images/sp-initiative-2.PNG" class="figure-img img-fluid rounded" alt="initiative-2">
+                  <figcaption class="figure-caption">Photovoltaic panels</figcaption>
+                </figure>
+              </div>
+              <div class="col-md-5 offset-md-2 my-5">
+                <h3>The Second Initiative</h3>
+                <p class="lead fs-4">By the end of 2023, SP should have completed the installation of the photovoltaic panels across the campus. These new installations provide us with renewable sources of energy, which reduces the reliance on burning fossil fuels to power up the campus. Moreover, this initiative reduces SP’s carbon footprint and helps our nation reach sustainability goals.</p>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-5 my-5">
+                <h3>The Third Initiative</h3>
+                <p class="lead fs-4">SP has planted more than 200 species of flora around the campus (230 species to be exact). This initiative not only makes the campus more vibrant and picturesque, but it greatly aids in reducing carbon emissions in the air.</p>
+              </div>
+              <div class="col-md-5 offset-md-2 my-5">
+                <figure class="figure">
+                  <img src="../images/sp-initiative-3.PNG" class="figure-img img-fluid rounded" alt="initiative-1">
+                  <figcaption class="figure-caption">230 species of flora</figcaption>
+                </figure>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-5 my-5">
+                <figure class="figure">
+                  <img src="../images/sp-initiative-4.PNG" class="figure-img img-fluid rounded" alt="initiative-1">
+                  <figcaption class="figure-caption">5 sustainability modules</figcaption>
+                </figure>
+              </div>
+              <div class="col-md-5 offset-md-2 my-5">
+                <h3>The Fourth Initiative</h3>
+                <p class="lead fs-4">SP has made it compulsory for all students to take 5 sustainability modules in their diploma courses. Through the 5 modules, it prepares students for the future of work in a green economy. Empowering our people with the relevant knowledge and skills about sustainability is a recipe for success in protecting our environment.</p>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-5 my-5">
+                <h3>The Fifth Initiative</h3>
+                <p class="lead fs-4">SP has a student based “environment club” which advocates driving environmental consciousness among their peers and the community through a variety of campaigns and social media content. Students who are interested in providing a service for the environment can join the club to spread their positive message. Ultimately, it can create a culture for saving the environment within SP’s student body.</p>
+              </div>
+              <div class="col-md-5 offset-md-2 my-5">
+                <figure class="figure">
+                  <img src="../images/sp-initiative-1.PNG" class="figure-img img-fluid rounded" alt="initiative-1">
+                  <figcaption class="figure-caption">SP environment club</figcaption>
+                </figure>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="d-flex align-items-center justify-content-center mx-auto pb-5">
+            <button onclick="toTop()" class="btn btn-dark">Back to top</button> <!--back to top button-->
+          </div>
+        </main>
+
+
+
+        <!-- Footer -->
+        <footer class="bg-dark text-center text-white">
+          <!-- Grid container -->
+          <div class="container p-4">
+            <!-- Section: Social media -->
+            <section class="mb-4">
+              <!-- Facebook -->
+              <a class="btn btn-outline-light btn-floating m-1" href="twitter.com" role="button"><img src="../images/twitter-icon.png" alt="twitter"></a><!--image taken from https://www.flaticon.com/free-icons/twitter" Twitter icons created by Pixel perfect - Flaticon-->
+
+              <!-- Twitter -->
+              <a class="btn btn-outline-light btn-floating m-1" href="facebook.com" role="button"><img src="../images/facebook-icon.png" alt="facebook"></a><!--https://www.flaticon.com/free-icons/facebook" Facebook icons created by Pixel perfect - Flaticon-->
+              <!-- Google -->
+              <a class="btn btn-outline-light btn-floating m-1" href="reddit.com" role="button"><img src="../images/reddit-icon.png" alt="reddit"></a><!--https://www.flaticon.com/free-icons/reddit Reddit icons created by Md Tanvirul Haque - Flaticon-->
+
+              <!-- Instagram -->
+              <a class="btn btn-outline-light btn-floating m-1" href="instagram.com" role="button"><img src="../images/instagram-icon.png" alt="instagram"></a><!--<a href="https://www.flaticon.com/free-icons/instagram-logo" title="instagram logo icons">Instagram logo icons created by Pixel perfect - Flaticon</a>-->
+
+              <!-- Linkedin -->
+              <a class="btn btn-outline-light btn-floating m-1" href="youtube.com" role="button"><img src="../images/youtube-icon.png" alt="youtube"></a><!--<a href="https://www.flaticon.com/free-icons/youtube" title="youtube icons">Youtube icons created by Freepik - Flaticon</a>-->
+
+              <!-- Github -->
+              <a class="btn btn-outline-light btn-floating m-1" href="vk.com" role="button"><img src="../images/vk-icon.png" alt="vk"></a><!--<a href="https://www.flaticon.com/free-icons/vk" title="VK icons">VK icons created by Freepik - Flaticon</a>-->
+            </section>
+            <!-- Section: Social media -->
+
+
+            <!-- Section: Text -->
+            <section class="mb-4">
+              <h4 class="mb-3">Why Save The Earth?</h4>
+              <p>
+                We should save the mother earth so that our future generations can live in a safe environment. We can save the earth by saving trees, 
+                natural vegetation, water, natural resources, electricity, etc. We should strictly follow all the possible 
+                measures to control the environmental pollution and global warming.
+              </p>
+            </section>
+            <!-- Section: Text -->
+
+            <!-- Section: Links -->
+            <section class="">
+              <!--Grid row-->
+              <div class="row">
+                <!--Grid column-->
+                <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                  <h5 class="text-uppercase">Navigation</h5>
+
+                  <ul class="list-unstyled mb-0">
+                    <li>
+                      <a href="../HTML/index.html" class="text-white">Home</a>
+                    </li>
+                    <li>
+                      <a href="../HTML/initiative.htm" class="text-white">Initiative</a>
+                    </li>
+                    <li>
+                      <a href="../HTML/opinion.html" class="text-white">Opinion</a>
+                    </li>
+                    <li>
+                      <a href="../HTML/feedback.html" class="text-white">Feedback</a>
+                    </li>
+                    <li>
+                      <a href="../HTML/aboutMe.html" class="text-white">About Me</a>
+                    </li>
+                  </ul>
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                  <h5 class="text-uppercase">Environmental Organisations</h5>
+
+                  <ul class="list-unstyled mb-0">
+                    <li>
+                      <a href="https://wild.org/" class="text-white">WILD</a>
+                    </li>
+                    <li>
+                      <a href="https://www.wwf.sg/" class="text-white">WWF</a>
+                    </li>
+                    <li>
+                      <a href="https://www.fern.org/" class="text-white">FERN</a>
+                    </li>
+                    <li>
+                      <a href="350.org" class="text-white">350.org</a>
+                    </li>
+                  </ul>
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                  <h5 class="text-uppercase">Useful Links</h5>
+
+                  <ul class="list-unstyled mb-0">
+                    <li>
+                      <a href="fast.com" class="text-white">fast.com</a>
+                    </li>
+                    <li>
+                      <a href="draw.io" class="text-white">draw.io</a>
+                    </li>
+                    <li>
+                      <a href="slides.com" class="text-white">slides.com</a>
+                    </li>
+                    <li>
+                      <a href="codeacademy.com" class="text-white">codeacademy.com</a>
+                    </li>
+                  </ul>
+                </div>
+                <!--Grid column-->
+
+
+              </div>
+              <!--Grid row-->
+            </section>
+            <!-- Section: Links -->
+          </div>
+          <!-- Grid container -->
+
+          <!-- Copyright -->
+          <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2023 Copyright: How Wei Zhe
+          </div>
+          <!-- Copyright -->
+        </footer>
+        <!-- Footer -->
+</body>
+</html>

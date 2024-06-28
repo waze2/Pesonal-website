@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="../javascript/scrolltotop.js"></script>
+    <script src="../javascript/scrollToSection.js"></script>
+    <title>Opinion</title>
+</head>
+<body class="overflow-auto vh-100">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <!-- logo -->
+      <a class="navbar-brand fs-3 tex" href="https://savetheearth.org/" target="blank">Save The Earth!</a>
+      <!-- toggle btn -->
+      <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- sidebar -->
+      <div class="sidebar offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <!-- sidebar header -->
+        <div class="offcanvas-header text-white border-bottom">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+          <button type="button" 
+            class="btn-close btn-close-black shadow-none" 
+            data-bs-dismiss="offcanvas" 
+            aria-label="Close"></button>
+        </div>
+        <!-- sidebar body -->
+        <div class="offcanvas-body d-flex flex-column p-4 bg-dark">
+          <ul class="navbar-nav justify-content-center align-items-center 
+          fs-6 flex-grow-1 pe-3">
+          <!-- ADD HOVER STYLES -->
+            <li class="nav-item mx-3">
+              <a class="btn btn-outline-light" href="../HTML/index.html" role="button">Home</a>
+            </li>
+            <li class="nav-item mx-3">
+              <a class="btn btn-outline-light" href="../HTML/aboutMe.html" role="button">About</a>
+            </li>
+
+            <li class="nav-item mx-3">
+              <a class="btn btn-outline-light" href="../HTML/initiative.htm" role="button">Initiative</a>
+            </li>
+
+            <li class="nav-item mx-3">
+              <a class="btn btn-outline-light" href="../HTML/opinion.html" role="button">Opinion</a>
+            </li>
+
+            <li class="nav-item mx-3">
+              <a class="btn btn-outline-light" href="../HTML/feedback.html" role="button">Feedback</a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+      <main class="bg-white"> <!--main content-->
+        <section class="w-100 vh-100 d-flex flex-column justify-content-center 
+        align-items-center fs-1">
+          <p class="display-6">How Can We Save The Earth?</p>
+          <div class="btn-group" role="group" aria-label="Basic outlined example">
+            <button class="btn btn-outline-dark" onclick="scrollToSection()">What's Happening</button> <!--scroll to button group-->
+            <button class="btn btn-outline-dark" onclick="scrollToSecondary()">My Opinion</button>
+            <button class="btn btn-outline-dark" onclick="scrollToThird()">My Goals</button>
+          </div>
+        </section>
+
+            <div class="container my-5" id="main-section">
+              <div class="row">
+                <div class="col-md-4 my-5">
+                  <img  class="rounded" src="../images/climate-change.gif" alt="climate-change-gif"> <!--image taken from https://giphy.com/gifs/IntoAction-fsnF17BpCvjmE9SMTh-->
+                </div>
+                <div class="col-md-6 offset-md-2 my-5">
+                  <h1>What's Happening To Our Planet</h1>
+                  <p class="fs-5 lead">
+                    Since the start of industrialization in the 19th century, we intensified the use of fossil fuels releasing large amount of carbon dioxide into our environment. This causes the phenonmenon named the greenhouse effect which is the main driver for climate change. 
+                  </p>
+                </div>
+              </div>
+              
+
+              
+                <div class="row">
+                  <div class="col-md-6 my-5">
+                      <h1>Effects of climate change</h1>
+                      <p class="fs-5 lead">
+                         Climate change has made extreme weather events such as floods, droughts, and forest fires more likely and severe. This can take many lives, and destroy livelihoods. Furthermore, rising temperatures is another effect of climate change. This has caused the melting of polar icecaps, destroying habitats and cause sea levels to rise. 
+                      </p>
+                  </div>
+                  <div class="col-md-4 offset-md-1 my-5">
+                    <!-- carousel  -->
+                    <div id="carouselExampleCaptions" class="carousel slide"> <!--carousel widget-->
+                      <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                      </div>
+                      <div class="carousel-inner"> <!--carousel items-->
+                        <div class="carousel-item active">
+                          <img src="../images/flood-image.jpg" class="d-block w-100" alt="flood-picture"> <!--Image taken from: https://unsplash.com/photos/ZykOdnltZkQ-->
+                          <div class="carousel-caption d-none d-md-block">
+                            <h5>Flooding</h5>
+                            <p>Takes Many Lives</p>
+                          </div>
+                        </div>
+                        <div class="carousel-item">
+                          <img src="../images/drought-image.jpg" class="d-block w-100" alt="drought-image"><!--image taken from: https://unsplash.com/photos/louS5ssEPjM-->
+                          <div class="carousel-caption d-none d-md-block">
+                            <h5>Drought</h5>
+                            <p>Affects Many Livelihoods</p>
+                          </div>
+                        </div>
+                        <div class="carousel-item">
+                          <img src="../images/forest-fire-image.jpg" class="d-block w-100" alt="forest-fire-image"> <!--image taken from: https://unsplash.com/photos/kbTp7dBzHyY-->
+                          <div class="carousel-caption d-none d-md-block">
+                            <h5>Forest Fires</h5>
+                            <p>Destroys Environment</p>
+                          </div>
+                        </div>
+                        <div class="carousel-item">
+                          <img src="../images/ice-melting-image.jpg" class="d-block w-100" alt="melting-ice-image"> <!--image taken from https://ecochiccayman.com/2015/02/25/polar-bears-on-thin-ice/-->
+                          <div class="carousel-caption d-none d-md-block">
+                            <h5 class="text-warning">Melting Icecaps</h5>
+                            <p class="text-warning">Rising Sea Levels</p>
+                          </div>
+                        </div>
+                        <div class="carousel-item">
+                          <img src="../images/orangutan-loss-habitat.jpg" class="d-block w-100" alt="orang-utan-image"> <!--image by Ulet Ifanstasi from getty images-->
+                          <div class="carousel-caption d-none d-md-block">
+                            <h5>Habitat Loss</h5>
+                            <p>Animals Lose Their Homes</p>
+                          </div>
+                        </div>
+                      </div>
+                      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                      </button>
+                      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                      </button>
+                    </div>
+                  </div>
+              </div>
+
+              <div class="row" id="secondary-section">
+                <div class="col-md-4 my-5">
+                  <img class="rounded" src="../images/3Rs.gif" alt="reduce-reuse-recycle-gif">
+                </div>
+                <div class="col-md-6 offset-md-2 my-5">
+
+                    <h1>My Opinion</h1>
+                    <p class="fs-5 lead">
+                      Personally, I feel that everyone should adopt the 3Rs (Reduce, Reuse and Recycle) in order to save the Earth. Where reduce is the most important R followed by reuse and recycle.
+                    </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="container my-5">
+              <div class="row my-5 justify-content-center">
+                <div class="col-md-8">
+                  <div class=" badge bg-success d-flex flex-column justify-content-center 
+                  align-items-center mt-5"><h1>REDUCE</h1></div>
+                  <p class="lead fs-4 text-center my-3 mx-5">Reduce is the consumption of less resources. A way for us to carry out Reduce would be turning off the light switches when not in use, or ordering less food if unable to consume the whole portion. What is most important is how mindful we are when it comes to ways to reduce wastage. </p>
+                </div>
+              </div>
+
+              <div class="row my-5 justify-content-center">
+                <div class="col-md-8">
+                  <div class=" badge bg-success d-flex flex-column justify-content-center 
+                  align-items-center mt-5"><h1>REUSE</h1></div>
+                  <p class="lead fs-4 text-center my-3 mx-5">Reuse is giving an object about to be thrown a new life. For example, old clothes can be repurposed into rags used for cleaning. Another instance would be purchasing reusable items like tote bags, handkerchiefs, and water bottles. Overall, Reuse helps us to prevent  wastage via giving a new purpose to objects or using multi-use items. </p>
+                </div>
+              </div>
+
+              <div class="row my-5 justify-content-center">
+                <div class="col-md-8">
+                  <div class=" badge bg-success d-flex flex-column justify-content-center 
+                  align-items-center mt-5"><h1>RECYCLE</h1></div>
+                  <p class="lead fs-4 text-center my-3 mx-5">Recycle is converting waste into usable products. What we can do as an individual is sort out our waste according to its material and then dispose of it into recycling bins. For example, plastic, paper and metal. The waste is then filtered and cleaned, ready to be used for materials for production of items.</p>
+                </div>
+              </div>
+
+              <section class="d-flex flex-column justify-content-center 
+              align-items-center mt-5 pt-5" id="third-section">
+                <p class="display-6"><u>My Personal Goals For The Environment</u></p>
+              </section>
+
+              <div class="card-group"> <!--card group widget-->
+                <div class="card bg-transparent border-0  my-5 fs-5">
+                  <img src="../images/goal1-image.jpg" class="card-img-top" alt="goal-image-1"> <!--image taken from: https://youthincmag.com/eco-friendly-and-sustainable-products-to-use-in-your-everyday-life-->
+                  <div class="card-body">
+                    <h4 class="card-title">Goal 1</h4>
+                    <p class="card-text"><strong>Reduce the amount of waste I put out</strong>. Personally, I feel that I am a very wasteful person and I wish to not damage the environment. Hence the measures I am taking will be carrying reusable bags with me wherever I go, using a handkerchief instead of using tissue paper, and I will take shorter showers. 
+                    </p>
+                  </div>
+                </div>
+                <div class="card bg-transparent border-0 my-5 fs-5">
+                  <img src="../images/goal2-image.jpg" class="card-img-top" alt="..."><!--image taken from: https://youthincmag.com/eco-friendly-and-sustainable-products-to-use-in-your-everyday-life-->
+                  <div class="card-body">
+                    <h4 class="card-title">Goal 2</h4>
+                    <p class="card-text"><strong>Grow some plants in my house</strong>. Due to globalization, many trees have been deforested causing carbon emissions to be at an all time high. Hence, I feel I have a duty to aid in reducing carbon emissions for the sake of our future. Some plants I want to grow in my home include money plant, snake plant, and the umbrella plant. These plants are easy to grow at home and definitely help in reducing carbon emissions, even though the results are miniscule.
+                    </p>
+                  </div>
+                </div>
+                <div class="card bg-transparent border-0  my-5 fs-5">
+                  <img src="../images/goal3-image.jpg" class="card-img-top" alt="..."><!--image taken from: https://www.campaign180.com/post/social-networking-sites-->
+                  <div class="card-body">
+                    <h4 class="card-title">Goal 3</h4>
+                    <p class="card-text"><strong>To advocate the message “Love our planet”</strong>. I plan to create blog pages on various social media platforms like TikTok, YouTube, Instagram, and Facebook to spread my message. Examples of content I will put up on the social media platforms include DIY videos teaching others how to repurpose objects, and vlogs of me growing my plants at home!</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+              <h2 class="my-5">List Of Friends Who Have Pledged To Save The Earth With Me</h2> <!--responsive table and heading-->
+              <div class="table-responsive rounded my-3">
+                <table class="table table-dark table-hover">
+                  <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">First</th>
+                      <th scope="col">Last</th>
+                      <th scope="col">Handle</th>
+                      <th scope="col">Email</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>Wei Rean</td>
+                      <td>How</td>
+                      <td>@weireandoesstuff42</td>
+                      <td>weireanlovesdoingstuff@gmail.com</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">2</th>
+                      <td>Faisal</td>
+                      <td>Mohammed</td>
+                      <td>@FaisalPlaysFootball</td>
+                      <td>mohdfaisal1312@hotmail.com</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3</th>
+                      <td>Timothy Henry</td>
+                      <td>Zhang</td>
+                      <td>@timmmmrocks12</td>
+                      <td>zhangtimo@ichat.sp.edu.sg</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">4</th>
+                      <td>Tachibana</td>
+                      <td>Himeko</td>
+                      <td>@tachiruns</td>
+                      <td>tachischoolmail@gmail.com</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">5</th>
+                      <td>Fandi Ansu</td>
+                      <td>Ahmad</td>
+                      <td>@cryingtiger1983</td>
+                      <td>tigerplays7777@gmail.com</td>
+                    </tr>
+                </table>
+            </div>
+              <div class="d-flex align-items-center justify-content-center mx-auto pb-5">
+                <button onclick="toTop()" class="btn btn-dark">Back to top</button>
+              </div>
+        </main>
+
+      <!-- Footer -->
+      <footer class="bg-dark text-center text-white">
+        <!-- Grid container -->
+        <div class="container p-4">
+          <!-- Section: Social media -->
+          <section class="mb-4">
+            <!-- Facebook -->
+            <a class="btn btn-outline-light btn-floating m-1" href="twitter.com" role="button"><img src="../images/twitter-icon.png" alt="twitter"></a><!--image taken from https://www.flaticon.com/free-icons/twitter" Twitter icons created by Pixel perfect - Flaticon-->
+
+            <!-- Twitter -->
+            <a class="btn btn-outline-light btn-floating m-1" href="facebook.com" role="button"><img src="../images/facebook-icon.png" alt="facebook"></a><!--https://www.flaticon.com/free-icons/facebook" Facebook icons created by Pixel perfect - Flaticon-->
+            <!-- Google -->
+            <a class="btn btn-outline-light btn-floating m-1" href="reddit.com" role="button"><img src="../images/reddit-icon.png" alt="reddit"></a><!--https://www.flaticon.com/free-icons/reddit Reddit icons created by Md Tanvirul Haque - Flaticon-->
+
+            <!-- Instagram -->
+            <a class="btn btn-outline-light btn-floating m-1" href="instagram.com" role="button"><img src="../images/instagram-icon.png" alt="instagram"></a><!--<a href="https://www.flaticon.com/free-icons/instagram-logo" title="instagram logo icons">Instagram logo icons created by Pixel perfect - Flaticon</a>-->
+
+            <!-- Linkedin -->
+            <a class="btn btn-outline-light btn-floating m-1" href="youtube.com" role="button"><img src="../images/youtube-icon.png" alt="youtube"></a><!--<a href="https://www.flaticon.com/free-icons/youtube" title="youtube icons">Youtube icons created by Freepik - Flaticon</a>-->
+
+            <!-- Github -->
+            <a class="btn btn-outline-light btn-floating m-1" href="vk.com" role="button"><img src="../images/vk-icon.png" alt="vk"></a><!--<a href="https://www.flaticon.com/free-icons/vk" title="VK icons">VK icons created by Freepik - Flaticon</a>-->
+          </section>
+          <!-- Section: Social media -->
+
+
+          <!-- Section: Text -->
+          <section class="mb-4">
+            <h4 class="mb-3">Why Save The Earth?</h4>
+            <p>
+              We should save the mother earth so that our future generations can live in a safe environment. We can save the earth by saving trees, 
+              natural vegetation, water, natural resources, electricity, etc. We should strictly follow all the possible 
+              measures to control the environmental pollution and global warming.
+            </p>
+          </section>
+          <!-- Section: Text -->
+
+          <!-- Section: Links -->
+          <section class="">
+            <!--Grid row-->
+            <div class="row">
+              <!--Grid column-->
+              <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase">Navigation</h5>
+
+                <ul class="list-unstyled mb-0">
+                  <li>
+                    <a href="../HTML/index.html" class="text-white">Home</a>
+                  </li>
+                  <li>
+                    <a href="../HTML/initiative.htm" class="text-white">Initiative</a>
+                  </li>
+                  <li>
+                    <a href="../HTML/opinion.html" class="text-white">Opinion</a>
+                  </li>
+                  <li>
+                    <a href="../HTML/feedback.html" class="text-white">Feedback</a>
+                  </li>
+                  <li>
+                    <a href="../HTML/aboutMe.html" class="text-white">About Me</a>
+                  </li>
+                </ul>
+              </div>
+              <!--Grid column-->
+
+              <!--Grid column-->
+              <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase">Environmental Organisations</h5>
+
+                <ul class="list-unstyled mb-0">
+                  <li>
+                    <a href="https://wild.org/" class="text-white">WILD</a>
+                  </li>
+                  <li>
+                    <a href="https://www.wwf.sg/" class="text-white">WWF</a>
+                  </li>
+                  <li>
+                    <a href="https://www.fern.org/" class="text-white">FERN</a>
+                  </li>
+                  <li>
+                    <a href="350.org" class="text-white">350.org</a>
+                  </li>
+                </ul>
+              </div>
+              <!--Grid column-->
+
+              <!--Grid column-->
+              <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase">Useful Links</h5>
+
+                <ul class="list-unstyled mb-0">
+                  <li>
+                    <a href="fast.com" class="text-white">fast.com</a>
+                  </li>
+                  <li>
+                    <a href="draw.io" class="text-white">draw.io</a>
+                  </li>
+                  <li>
+                    <a href="slides.com" class="text-white">slides.com</a>
+                  </li>
+                  <li>
+                    <a href="codeacademy.com" class="text-white">codeacademy.com</a>
+                  </li>
+                </ul>
+              </div>
+              <!--Grid column-->
+
+
+            </div>
+            <!--Grid row-->
+          </section>
+          <!-- Section: Links -->
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+          © 2023 Copyright: How Wei Zhe
+        </div>
+        <!-- Copyright -->
+      </footer>
+      <!-- Footer -->
+</body>
+</html>
